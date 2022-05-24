@@ -29,13 +29,13 @@ devtools::install_github("dennist2/GenoPractice")
 This is a basic example which shows you how to test rcpp code:
 
 ``` r
+devtools::install_github("dennist2/SheepData")
+
 library(GenoPractice)
+library(SheepData)
 
-
-sheep <- scan("sheep.dat")
-
-## rollmean() is an rccp defined function
-GenoPractice:::rollmean(sheep,3)
+sheep <- SheepData::sheep
+GenoPractice:::rollmean(sheep$Population,3)
 
 ```
 
